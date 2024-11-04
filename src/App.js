@@ -63,7 +63,7 @@ const showAlert = (message,type) =>{
 <>
   
    
-   <Router>
+   <Router  basename="/my-react-app">
    <Navbar title= "React" sub= "Action" mode={mode} toggleMode={toggleMode} greenmode={setColorgreen}/>
    <Alert alert={alert}/>
   <Routes>
