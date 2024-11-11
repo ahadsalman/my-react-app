@@ -6,7 +6,6 @@ import About from './Components/About';
 import { useState } from 'react';
 import Alert from './Components/Alert';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import * as ReactDOM from "react-dom/client";
 
 
 
@@ -61,7 +60,7 @@ const showAlert = (message,type) =>{
  
  return (
 <>
-  
+
    
    <Router  basename="/my-react-app">
    <Navbar title= "React" sub= "Action" mode={mode} toggleMode={toggleMode} greenmode={setColorgreen}/>
@@ -69,7 +68,7 @@ const showAlert = (message,type) =>{
   <Routes>
     <Route 
       exact path="/about" 
-      element={<div className="container"><About /></div>} 
+      element={<div className="container" mode={mode}><About /></div>} 
     />
     
     <Route 
